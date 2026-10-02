@@ -1,0 +1,45 @@
+app:
+  name: Music Library
+  version: "0.1.0"
+
+paths:
+  music_root: music
+  read_roots: []  # old library roots accepted for repair; never new copy destinations
+  copy_roots: []  # verified extra copies; folders must already exist
+  temp_dir: .tmp
+  database: data/music_library.db
+  logs_dir: logs
+  log_file: logs/music-library.log
+
+audio:
+  default_format: m4a  # original | m4a | opus | mp3 | flac | wav | aiff
+  mp3_bitrate: 320     # 320 | 256 | 192
+  embed_artwork: true
+  concurrent_downloads: 4
+
+organization:
+  categorize_by_bpm: true  # BPM/120-129 BPM/Artist/Album; Unknown BPM if analysis fails
+  folder_template: "{artist}/{album}"
+  singles_album: Singles
+  filename_template: "{track:02d} - {title}"
+  singles_filename_template: "{title}"
+  never_overwrite: true
+
+duplicates:
+  on_source_id_match: skip   # skip | ask | download_copy
+  on_title_artist_match: warn
+
+metadata:
+  provider: musicbrainz  # none | musicbrainz
+  write_replaygain: false
+
+ui:
+  theme: dark
+  web_host: "127.0.0.1"
+  web_port: 8787
+  open_web_on_start: false
+
+logging:
+  level: INFO
+  max_bytes: 5242880
+  backup_count: 5

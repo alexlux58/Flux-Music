@@ -1,0 +1,60 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+.env
+config/local.yaml
+*.tfvars
+*.tfstate*
+
+# App runtime (local only)
+data/*.db
+data/*.db-*
+music/**
+!music/.gitkeep
+logs/**
+!logs/.gitkeep
+.tmp/
+temp/
+
+# Build
+build/
+dist/
+*.egg-info/
+.eggs/
+*.spec.bak
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Coverage / type
+.coverage
+htmlcov/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Versioned packaging outputs (old runtime data must be preserved)
+dist-bpm/
+build-bpm/
+
+# Runtime data anywhere in the checkout.
+*.db
+*.db-*
+*.sqlite*
+*.m4a
+*.mp3
+*.opus
+*.flac
+*.wav
+*.aiff
+*.webm
+*.mp4

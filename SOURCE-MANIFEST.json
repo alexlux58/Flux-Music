@@ -1,0 +1,254 @@
+{
+  "source": "services/music-library",
+  "files": [
+    {
+      "path": ".env.example",
+      "sha256": "e7983b87c68bb881bfac166f2153902c4bcc052caae5fbae995a291f37ce8ccf"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "e5a0709fefb936f0c11e90b71c820d65f855ca28ee2da68b60fe53890ca6743a"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "7a873d26b238e52e6e62aecea1443c53eb35c3bac6e9a51ff2b288d10ccdd8ed"
+    },
+    {
+      "path": "Makefile",
+      "sha256": "74a50476a594c24fbf6ba4bdd77625d777b60b520a7a419f5a12cde0bed5aa30"
+    },
+    {
+      "path": "MusicLibrary.spec",
+      "sha256": "cd8dfc3fe83b284f265d230ad014b20a22a7bcf670d027978f997cfd921e95d0"
+    },
+    {
+      "path": "Start Music Library BPM.bat",
+      "sha256": "597eaee0b06c53fe2124d72a7e675beffdffd737d9fd54d6680cf71b13cf59ed"
+    },
+    {
+      "path": "Start Music Library.bat",
+      "sha256": "1c239c40fe61c0225f808fc9f564cb784d8627a7782782aef46829737426dabe"
+    },
+    {
+      "path": "config/default.yaml",
+      "sha256": "254fafe20cad38865ec9f842ed910507e61b037b0ce7ada88e14dd11772c6b9f"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "b53e1bfb577926728ae7e6c179be9700d0cc2506174cb8e2a793d3f01561b73f"
+    },
+    {
+      "path": "scripts/build.ps1",
+      "sha256": "837cd2a164443efa61bb790cc95f01c32c97c679260368dab3d17f579472bd58"
+    },
+    {
+      "path": "scripts/dev.ps1",
+      "sha256": "7c75e9c4a8502246e92c590d879ac6ecd5be41a0758fd400b833405751f23b0c"
+    },
+    {
+      "path": "scripts/dev.sh",
+      "sha256": "3ece018fe335c5091353bb880c340d2557b62b4c14d228446bd73eee33eeb31e"
+    },
+    {
+      "path": "src/__init__.py",
+      "sha256": "a2c56ad7a5d7a0d81775f0401d3018069097d05f02340191779662e9b306c8e3"
+    },
+    {
+      "path": "src/app.py",
+      "sha256": "a52fdfde0ce9e10cc638caea928744223e1baba8c125334b19f3e687a775369b"
+    },
+    {
+      "path": "src/config.py",
+      "sha256": "abc8cf3bfbc3d58dda32f22d5e7e5801a30c04c9434b39c5b5f99b631c3451c9"
+    },
+    {
+      "path": "src/database/__init__.py",
+      "sha256": "fa2cd952011286d6f9d957037bbf21dbec4f1b4226d560e42951f2f1d31f83bf"
+    },
+    {
+      "path": "src/database/migrations.py",
+      "sha256": "161ec93b1cac4760bebddb9921e84e9ee71893c121ddf5a3afffc75c00e59d53"
+    },
+    {
+      "path": "src/database/models.py",
+      "sha256": "1bf7744621b4a20e8748c654343eb82101d0d072f4b9b9512fef6a6992a7e01b"
+    },
+    {
+      "path": "src/database/repository.py",
+      "sha256": "b5804e1ff1055fa2db87a058f60a398041ca74b22f2141807634fb8a3c733b0e"
+    },
+    {
+      "path": "src/main.py",
+      "sha256": "0b7666dc8780c0a8134e25af5f2c5e5587b5b1fe9d50eea4e6a4944ab5b2c09e"
+    },
+    {
+      "path": "src/services/__init__.py",
+      "sha256": "feb005d1bfc448e9ca3523514c3801b6fe43ea4f2559fc0a9ce7c7d3fdda388c"
+    },
+    {
+      "path": "src/services/artwork.py",
+      "sha256": "50967f07ad6249741381d1fabe8c142244e13f76b9810f82679f8336b1d09b06"
+    },
+    {
+      "path": "src/services/audio_processor.py",
+      "sha256": "4086a1c776b4b131152dfd9a08a88ec8c93537a0c0ee217ce5129c4b8c558f8d"
+    },
+    {
+      "path": "src/services/diagnostics.py",
+      "sha256": "ed7146a0b33a5b41c4647fe82696c9c938642a2be308d7d38f20bf5bf8c04b9d"
+    },
+    {
+      "path": "src/services/downloader.py",
+      "sha256": "653953f216ebf984b502dbda53cbf3001cdb8264b596b6ab8561b0c334b3af26"
+    },
+    {
+      "path": "src/services/duplicate_detector.py",
+      "sha256": "d0e8932f5efa3ed7c3c6338d8b4346c015d3e73744452d8559e839db66dc679d"
+    },
+    {
+      "path": "src/services/library_copies.py",
+      "sha256": "c07f98766f2d77e11cb37eef53a4da7e349a2bf939d8efe3e1c0e9228ff16da5"
+    },
+    {
+      "path": "src/services/library_repair.py",
+      "sha256": "e254a0eb5872fd0892d7a49064ec0b9ac7b9d746eed11d885d743fccdb47c206"
+    },
+    {
+      "path": "src/services/library_scanner.py",
+      "sha256": "ac8135c374d484ab3c0d7e290776248a6ca808ce62cd725aea6f5f793844765f"
+    },
+    {
+      "path": "src/services/metadata.py",
+      "sha256": "0cc1e7a66a46cd2681416c0a50f2b797cbf6bbee795a14b7870093ad02b7143b"
+    },
+    {
+      "path": "src/services/organizer.py",
+      "sha256": "9668f7bc09d5dbfd3c17d19f65bd340a6604361bc56b4deb908a8fa3633ff02b"
+    },
+    {
+      "path": "src/services/pipeline.py",
+      "sha256": "af54bb7a1bd2e819903bd266fd36bf5b8d3c15d5c6e9a6ca5e47403cdf8a22b0"
+    },
+    {
+      "path": "src/services/player.py",
+      "sha256": "672885fab3a3de6abbfaf44d54c5a767bc7695ee06a927d667c27724a34adff2"
+    },
+    {
+      "path": "src/services/tempo.py",
+      "sha256": "b857f051d246ff9e26a3a17c526dd23f8d1e2635ce314c728b49e283be596e92"
+    },
+    {
+      "path": "src/ui/__init__.py",
+      "sha256": "33a0c41aa8acdbd9c83514837bbc1554a997b55a40940f276d6719df96396681"
+    },
+    {
+      "path": "src/ui/download_page.py",
+      "sha256": "7c82c03f669cfcccff3693e48babf3f5f264ab8705ea50b16f175cf719891412"
+    },
+    {
+      "path": "src/ui/library_page.py",
+      "sha256": "f129c6f6cc8677927786cebb5cebecfd2b419a5b215442feb462301b3a5331f3"
+    },
+    {
+      "path": "src/ui/main_window.py",
+      "sha256": "154bc2cdd0a26bff9ec4c071dbc5c26c67445c070b6861782e8864fff3900853"
+    },
+    {
+      "path": "src/ui/metadata_dialog.py",
+      "sha256": "dd1d066876af379ac08e34d68084d592ae36f050d266db565f1fec9b21214280"
+    },
+    {
+      "path": "src/ui/playlists_page.py",
+      "sha256": "a72173d8ea17b8aceeb24ed55355ba05e11a3eea20114fc07729fef3c8fdb744"
+    },
+    {
+      "path": "src/ui/settings_page.py",
+      "sha256": "f0b5c4fb3ec5b32d3ece4ace544628fe56a246d5b11579a0db0444ffc4302f95"
+    },
+    {
+      "path": "src/ui/theme.py",
+      "sha256": "70f5beb58f5206216b4743d3fdde6769d04893b689bb4e14efd91d2de7cb0fb3"
+    },
+    {
+      "path": "src/ui/widgets/__init__.py",
+      "sha256": "15b994957c3e3db6ab5662569ae2ef2c750e1c5936409817d3e65490f0e2b8d4"
+    },
+    {
+      "path": "src/utils/__init__.py",
+      "sha256": "bc9e538930cacff17ccb39a97722ec2f9a4e2bd3e20ef7a12cc9f964918dab78"
+    },
+    {
+      "path": "src/utils/filesystem.py",
+      "sha256": "b84d00ec876931897291fd9832ec9b558c6dd1a79a358bec6639400c79571779"
+    },
+    {
+      "path": "src/utils/logging.py",
+      "sha256": "9ac444d06c00f209bd3f07129667f0b8501b2ddb4fbc61125b7cd9a4c9f8e444"
+    },
+    {
+      "path": "src/utils/validation.py",
+      "sha256": "8dc703d32310530345d9e39aeed2d38c15bd75a7561e404dce5864e1b0993011"
+    },
+    {
+      "path": "src/web/__init__.py",
+      "sha256": "b6772bb7b9181d64452d4eafc2848057d5031609b090398337ca3914b4ed403c"
+    },
+    {
+      "path": "src/web/api.py",
+      "sha256": "757609b7ffdc12223298ae9b411ec0c32e5ce9d3376205215db81e3776b83950"
+    },
+    {
+      "path": "src/workers/__init__.py",
+      "sha256": "6244add58590e8d91f5c2d9f0691c2c85bc59bd645364b7d8b9dc2b2ed7b36d2"
+    },
+    {
+      "path": "src/workers/download_worker.py",
+      "sha256": "0756efe042cebbef327de30c13ccebf80100ea70ef78fd57c8600d18c65167f4"
+    },
+    {
+      "path": "src/workers/organize_worker.py",
+      "sha256": "fc7583a810c2a8f7531e5a9e85429bed2987606dcfe87a1695a6b1de58326989"
+    },
+    {
+      "path": "tests/integration/test_pipeline.py",
+      "sha256": "75b84c4b31ca9a39a59fbf9f97144e4e353d6be7eee9a528819bcbf37ce89b57"
+    },
+    {
+      "path": "tests/unit/test_audio_formats.py",
+      "sha256": "aee16619d47f5a0443c2a935cc8b67e423685a62a9e5cd23d4355c34d0844039"
+    },
+    {
+      "path": "tests/unit/test_bpm_ui.py",
+      "sha256": "ecd0fb592e4b33fe3dbb5616e74fefda39e95e38c2a0f8883f045165132837e7"
+    },
+    {
+      "path": "tests/unit/test_config.py",
+      "sha256": "c307bbb5ab8bf3e3775b36b80d9888327ed7a9815f6a6e0f59463d065a9d8e1d"
+    },
+    {
+      "path": "tests/unit/test_database.py",
+      "sha256": "85bfd22d83571efe1dbfca5c0aff7e0e9ad2161bd1e9380860a59711e7f5cb0a"
+    },
+    {
+      "path": "tests/unit/test_filesystem.py",
+      "sha256": "c4dd62e2a8bf6be9c660b63bc0a7693b1498ec62b201419ae8bfa0cea0e1cace"
+    },
+    {
+      "path": "tests/unit/test_library_copies.py",
+      "sha256": "313a34bdd4e6c8d69fb0d430efd95909ed846ba89086f04a5e7432f8c26500ed"
+    },
+    {
+      "path": "tests/unit/test_metadata_normalize.py",
+      "sha256": "5a8fcfeb48ec4e64071f66642330cc75405e0fda57e875dcfb519c4d8785d817"
+    },
+    {
+      "path": "tests/unit/test_tempo.py",
+      "sha256": "481095bf952843e5d9313b8738b9d577d14ab2cd43d361accaef8e4f8bb21726"
+    },
+    {
+      "path": "tests/unit/test_validation.py",
+      "sha256": "3b11aee9e936acfb69e37b0d4388c2a03e0b759181ee5d83ad1f0a9525f84876"
+    }
+  ],
+  "note": "Source snapshot; local configuration, runtime data and source history excluded."
+}

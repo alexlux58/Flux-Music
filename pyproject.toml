@@ -1,0 +1,75 @@
+[project]
+name = "music-library"
+version = "0.1.0"
+description = "Local music library with authorized URL downloads, metadata, and multi-device UI"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Home Lab" }]
+dependencies = [
+  "PySide6>=6.7.0",
+  "SQLAlchemy>=2.0.36",
+  "yt-dlp>=2024.12.0",
+  "mutagen>=1.47.0",
+  "librosa==0.11.0",
+  "pydantic>=2.10.0",
+  "pydantic-settings>=2.7.0",
+  "PyYAML>=6.0.2",
+  "httpx>=0.28.0",
+  "fastapi>=0.115.0",
+  "uvicorn[standard]>=0.34.0",
+  "platformdirs>=4.3.0",
+  "musicbrainzngs>=0.7.1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3.0",
+  "pytest-qt>=4.4.0",
+  "ruff>=0.9.0",
+  "mypy>=1.14.0",
+  "types-PyYAML>=6.0.12",
+]
+build = [
+  "pyinstaller>=6.11.0",
+  "Pillow>=11.0.0",
+]
+
+[project.scripts]
+music-library = "src.main:main"
+
+[build-system]
+requires = ["setuptools>=75.0.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+exclude = [".venv", "dist", "build", "data", "music", "logs"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "C4", "SIM", "RET", "ARG", "PTH", "RUF"]
+ignore = ["RET504"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["ARG001", "S101"]
+"src/web/api.py" = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra --strict-markers"
+markers = [
+  "integration: integration tests that do not hit the network",
+]
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+packages = ["src"]

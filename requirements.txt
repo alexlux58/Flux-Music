@@ -1,0 +1,2 @@
+# pyproject.toml owns all dependencies, including BPM analysis.
+-e .
