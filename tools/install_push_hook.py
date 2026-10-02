@@ -12,6 +12,10 @@ case "$(uname -s)" in
     *) exec python3 "$root/tools/pre_push.py" --hook "$@" ;;
 esac
 """
+COMMIT_HOOK = """#!/bin/sh
+set -eu
+exec gitleaks git --staged --redact=100 --no-banner
+"""
 
 
 def main():
@@ -25,12 +29,15 @@ def main():
     if not directory.is_absolute():
         directory = ROOT / directory
     directory.mkdir(parents=True, exist_ok=True)
-    target = directory / "pre-push"
-    if target.exists() and target.read_text() != HOOK:
-        raise RuntimeError("Existing pre-push hook needs review; refusing to overwrite")
-    target.write_text(HOOK, encoding="utf-8", newline="\n")
-    target.chmod(0o755)
-    print("Installed checked-origin/gitleaks pre-push hook")
+    for name, content in (("pre-push", HOOK), ("pre-commit", COMMIT_HOOK)):
+        target = directory / name
+        if target.exists() and target.read_text() != content:
+            raise RuntimeError(
+                f"Existing {name} hook needs review; refusing to overwrite"
+            )
+        target.write_text(content, encoding="utf-8", newline="\n")
+        target.chmod(0o755)
+    print("Installed staged-gitleaks and checked-origin/gitleaks push hooks")
 
 
 if __name__ == "__main__":
