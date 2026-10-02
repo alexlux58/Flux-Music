@@ -1,7 +1,7 @@
 """Install the ordinary-origin and gitleaks guard without overwriting hooks."""
 
-from pathlib import Path
 import subprocess
+from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 HOOK = """#!/bin/sh
@@ -32,9 +32,7 @@ def main():
     for name, content in (("pre-push", HOOK), ("pre-commit", COMMIT_HOOK)):
         target = directory / name
         if target.exists() and target.read_text() != content:
-            raise RuntimeError(
-                f"Existing {name} hook needs review; refusing to overwrite"
-            )
+            raise RuntimeError(f"Existing {name} hook needs review; refusing to overwrite")
         target.write_text(content, encoding="utf-8", newline="\n")
         target.chmod(0o755)
     print("Installed staged-gitleaks and checked-origin/gitleaks push hooks")

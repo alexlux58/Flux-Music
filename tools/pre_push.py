@@ -8,15 +8,17 @@ through /proc as well. Missing context fails closed. Never opens credentials.
 
 from __future__ import annotations
 
-import os
 import json
-from pathlib import Path
+import os
 import subprocess
 import sys
+from pathlib import Path
 
-URLS = {"private": "https://github.com/alexlux58/Flux-Music.git",
-        "public": "https://github.com/alexlux58/Flux-Music.git",
-        "music": "https://github.com/alexlux58/Flux-Music.git"}
+URLS = {
+    "private": "https://github.com/alexlux58/Flux-Music.git",
+    "public": "https://github.com/alexlux58/Flux-Music.git",
+    "music": "https://github.com/alexlux58/Flux-Music.git",
+}
 ZERO = "0" * 40
 SAFE_OPTIONS = {"-u", "--set-upstream", "--dry-run", "--porcelain", "--verbose", "-v"}
 
