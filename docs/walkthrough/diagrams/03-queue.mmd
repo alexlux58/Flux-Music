@@ -1,0 +1,13 @@
+flowchart TB
+  Paste[Desktop input] --> Queue[(Persisted queued rows)]
+  Browser[Browser POST] --> Queue
+  Timer[Desktop three-second timer] --> Drain[Drain selected queued jobs]
+  Queue --> Drain
+  Drain --> Slots{Paused or no free slots?}
+  Slots -->|yes| Wait[Leave queued]
+  Slots -->|no| Worker[QRunnable download worker]
+  Worker --> Session[Independent database session]
+  Worker --> Signals[Qt progress / finished / error signals]
+  Signals --> Refresh[Refresh and fill free slots]
+  Refresh --> Drain
+  WebOnly[Web-only mode] --> NoDrain[No desktop scheduler]

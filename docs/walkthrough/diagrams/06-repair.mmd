@@ -1,0 +1,12 @@
+flowchart TB
+  Track[Existing catalog track] --> Contain{Source under accepted root?}
+  Contain -->|no| Error[Report per-track error]
+  Contain -->|yes| BPM[Use known BPM or estimate missing value]
+  BPM --> Target[Compute deterministic primary destination]
+  Target --> Primary[Verified primary copy; retain original]
+  Primary --> Extra[Verify all configured extra copies]
+  Extra -->|success| Update[Update same track ID / path / hash / BPM]
+  Update --> Commit[Commit this track]
+  Extra -->|failure| Rollback[Rollback row; retain created copies]
+  Commit --> Next[Next catalog track]
+  Rollback --> Next

@@ -5,6 +5,19 @@ PySide6 desktop player and FastAPI browser companion. Download only content
 you have permission to obtain. The app does not bypass DRM, paywalls or
 account restrictions.
 
+## Technical walkthrough
+
+The detailed [Markdown walkthrough](docs/walkthrough/flux-music-technical-walkthrough.md)
+and [PDF walkthrough](docs/walkthrough/dist/flux-music-technical-walkthrough.pdf)
+cover architecture, setup, configuration, the download pipeline, queue state,
+BPM analysis, verified extra copies, imports, recovery, the catalog schema,
+API behavior, tests, Windows packaging and publication. Seven source-controlled
+diagrams and checked code excerpts accompany the guide.
+
+Documentation is generated from the adjacent `.md.in` source. Build/check with
+`python tools/docs-build/build.py` / `python tools/docs-build/build.py --check`;
+the guide documents the pinned PDF toolchain and diagram rendering.
+
 ## Features
 
 - Paste multiple URLs, preview a playlist and queue parallel downloads.
@@ -59,6 +72,9 @@ It has **no authentication**. Keep the default loopback binding. If you choose
 LAN access, restrict access to trusted devices using your own network controls;
 do not expose it to the public internet. No network settings are changed by
 this project.
+
+The desktop app processes queued downloads. Web-only mode can browse the
+catalog and enqueue jobs, but does not run a headless download worker.
 
 ## Where songs go
 

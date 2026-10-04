@@ -1,0 +1,9 @@
+title: Flux-Music Technical Walkthrough
+pagetitle: Flux-Music Technical Walkthrough
+subtitle: Architecture, authorized downloads, local BPM analysis, verified libraries and operations
+kicker: FLUX MUSIC / SOURCE EDITION 0.1.0
+author: Flux-Music maintainers
+audience: >-
+  A source-grounded guide for operators and developers. Covers the complete
+  audio and catalog lifecycle, failure recovery, offline testing and publishing.
+  Excerpts are checked against their source; no personal library data is included.

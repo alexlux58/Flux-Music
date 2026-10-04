@@ -1,0 +1,11 @@
+flowchart TB
+  User[Desktop operator] --> UI[PySide6 window and thread pool]
+  Browser[Local browser] --> Web[FastAPI and Uvicorn thread]
+  UI --> Context[AppContext and session factory]
+  Web --> Context
+  Context --> DB[(SQLite catalog)]
+  UI --> Pipeline[Download pipeline]
+  Pipeline --> Source[yt-dlp and source metadata]
+  Pipeline --> Audio[FFmpeg / Mutagen / librosa]
+  Pipeline --> Primary[Primary audio library]
+  Primary --> Copies[Verified extra library copies]

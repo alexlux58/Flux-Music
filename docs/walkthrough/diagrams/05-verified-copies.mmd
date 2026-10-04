@@ -1,0 +1,13 @@
+flowchart TB
+  Source[Primary tagged song and SHA-256] --> Root{Extra root available?}
+  Root -->|no| Fail[Report error; retain source]
+  Root -->|yes| Existing{Target already exists?}
+  Existing -->|yes| Match{Digest matches?}
+  Match -->|yes| Reuse[Reuse verified target]
+  Match -->|no| Conflict[Preserve both; report conflict]
+  Existing -->|no| Temp[Write owned partial file / flush / fsync]
+  Temp --> Verify{Partial digest matches?}
+  Verify -->|no| Cleanup[Remove owned partial; report error]
+  Verify -->|yes| Atomic[Publish final name without replacing]
+  Atomic --> Next[Proceed to next root]
+  Reuse --> Next

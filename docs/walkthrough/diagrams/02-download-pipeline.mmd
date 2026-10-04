@@ -1,0 +1,10 @@
+flowchart TB
+  Preview[Preview and source identity] --> Known{Known source?}
+  Known -->|skip policy| Repair[Verify or repair existing copies]
+  Repair --> Skipped[Completed / Skipped]
+  Known -->|new| Prepare[Download / probe / enrich / BPM / tag]
+  Prepare --> Place[Place primary song and hash finalized bytes]
+  Place --> Commit[Add track and COMMIT catalog]
+  Commit --> Copy[Save verified extra copies]
+  Copy -->|success| Complete[Complete]
+  Copy -->|error| Failed[Failed job; primary and catalog retained]

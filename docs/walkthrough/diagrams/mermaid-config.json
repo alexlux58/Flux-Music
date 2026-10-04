@@ -1,0 +1,17 @@
+{
+  "theme": "base",
+  "look": "classic",
+  "htmlLabels": false,
+  "themeVariables": {
+    "fontFamily": "DejaVu Sans",
+    "fontSize": "15px",
+    "primaryColor": "#e8f6fa",
+    "primaryTextColor": "#163843",
+    "primaryBorderColor": "#167c91",
+    "lineColor": "#415c66",
+    "secondaryColor": "#f3f6f8",
+    "tertiaryColor": "#ffffff"
+  },
+  "flowchart": {"htmlLabels": false, "curve": "linear"},
+  "securityLevel": "strict"
+}

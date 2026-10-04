@@ -1,0 +1,12 @@
+config:
+  default: true
+  MD013: false # prose is wrapped; URLs and tables can be long
+  MD033: false # generated source comments and optional HTML anchors
+  MD041: false # context import files need not start with a heading
+  MD060: false # compact readable tables
+globs:
+  - "**/*.md"
+ignores:
+  - "**/.venv/**"
+  - "**/node_modules/**"
+  - "docs/walkthrough/build/**"

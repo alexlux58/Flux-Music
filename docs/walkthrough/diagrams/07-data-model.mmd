@@ -1,0 +1,17 @@
+erDiagram
+  ARTIST ||--o{ ALBUM : has
+  ARTIST ||--o{ TRACK : credited
+  ALBUM ||--o{ TRACK : contains
+  PLAYLIST ||--o{ PLAYLIST_TRACK : orders
+  TRACK ||--o{ PLAYLIST_TRACK : referenced
+  TRACK {
+    int id PK
+    string uuid UK
+    string file_path
+    float bpm
+  }
+  DOWNLOAD_JOB {
+    int id PK
+    string status
+    float progress
+  }

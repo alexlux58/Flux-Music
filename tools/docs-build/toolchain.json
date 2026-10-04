@@ -1,0 +1,6 @@
+{
+  "pandoc_version": "3.12",
+  "pandoc_linux_amd64_sha256": "67d7d011fed8c8543306022b985b9b2499ab9b74818df91d8727c7e9ebc5ba06",
+  "mermaid_cli_version": "12.0.0",
+  "weasyprint_version": "70.0"
+}

@@ -1,0 +1,7 @@
+flowchart TB
+  Audio[Finalized temporary audio] --> Decode[FFmpeg: first 180 seconds / mono / 22050 Hz]
+  Decode --> Beat[Validate float32 samples; librosa beat tracker]
+  Beat --> Bounds{Valid samples / four beats / 30-300 BPM?}
+  Bounds -->|no| Unknown[Unknown BPM]
+  Bounds -->|yes| Bucket[Round estimate; select ten-BPM bucket]
+  Bucket --> Folder[Example: 120-129 BPM]

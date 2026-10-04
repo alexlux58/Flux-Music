@@ -58,3 +58,6 @@ build-bpm/
 *.aiff
 *.webm
 *.mp4
+docs/walkthrough/build/
+!docs/walkthrough/dist/
+!docs/walkthrough/dist/*.pdf
